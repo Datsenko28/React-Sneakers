@@ -1,10 +1,14 @@
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <h1>The future Sneakers App</h1>
-      <h2>This app will write on React and SCSS</h2>
+    <div className="wrapper">
+      <header>
+        <svg/>
+        <div>
+          <h3>React Sneakers</h3>
+        </div>
+      </header>
     </div>
   );
 }
