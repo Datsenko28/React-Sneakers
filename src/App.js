@@ -1,4 +1,4 @@
-import './App.scss'
+import './index.scss'
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
                     </div>
                 </div>
 
-                <ul>
+                <ul className="headerRight">
                     <li>
                         <svg />
                         <span>1300грн</span>
@@ -22,6 +22,10 @@ function App() {
                     </li>
                 </ul>
             </header>
+            <div className="content">
+                <h1>Всі кросівки</h1>
+                ...
+            </div>
         </div>
     )
 }
