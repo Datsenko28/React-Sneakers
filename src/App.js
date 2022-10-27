@@ -2,18 +2,18 @@ import './index.scss'
 
 function App() {
     return (
-        <div className="wrapper">
-            <header className="d-flex justify-between">
+        <div className="wrapper clear">
+            <header className="d-flex justify-between align-center p-40">
                 <div className="d-flex align-center	">
                     <img width={40} height={40} src="/img/logo.png" />
-                    <div headerInfo>
-                        <h3>React Sneakers</h3>
+                    <div className="headerInfo">
+                        <h3 className="text-uppercase">React Sneakers</h3>
                         <p>Магазин кращих кросівок</p>
                     </div>
                 </div>
 
-                <ul className="headerRight">
-                    <li>
+                <ul className="d-flex">
+                    <li className="mr-30">
                         <img width={18} height={18} src="/img/basket.svg" />
                         <span>1300грн</span>
                     </li>
@@ -22,9 +22,8 @@ function App() {
                     </li>
                 </ul>
             </header>
-            <div className="content">
+            <div className="content p-40">
                 <h1>Всі кросівки</h1>
-                ...
             </div>
         </div>
     )
