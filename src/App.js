@@ -8,7 +8,7 @@ function App() {
                     <img width={40} height={40} src="/img/logo.png" />
                     <div className="headerInfo">
                         <h3 className="text-uppercase">React Sneakers</h3>
-                        <p>Магазин кращих кросівок</p>
+                        <p className="opacity-5">Магазин кращих кросівок</p>
                     </div>
                 </div>
 
@@ -23,7 +23,13 @@ function App() {
                 </ul>
             </header>
             <div className="content p-40">
-                <h1 className="mb-40">Всі кросівки</h1>
+                <div className="d-flex align-center justify-between mb-40">
+                    <h1>Всі кросівки</h1>
+                    <div className="search-block d-flex">
+                        <img src="/img/search.svg" alt="Search" />
+                        <input placeholder="Пошук..." />
+                    </div>
+                </div>
 
                 <div className="d-flex">
                     <div className="card">
