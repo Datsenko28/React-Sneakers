@@ -33,6 +33,10 @@ function App() {
 
                 <div className="d-flex">
                     <div className="card">
+                        <div className="favorite">
+                            <img src="/img/heart-unliked.svg" alt="Unliked" />
+                        </div>
+
                         <img
                             width={133}
                             height={133}
