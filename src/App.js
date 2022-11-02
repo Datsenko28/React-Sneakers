@@ -3,6 +3,29 @@ import './index.scss'
 function App() {
     return (
         <div className="wrapper clear">
+            <div className="overlay">
+                <div className="drawer">
+                    <h2>Корзина</h2>
+                    {/* Те що є в Корзині */}
+                    <div className="cartItem d-flex align-center">
+                        <img
+                            className="mr-20"
+                            width={70}
+                            height={70}
+                            src="/img/sneakers/1.jpg"
+                            alt="Sneakers"
+                        />
+                        <div className="mr-20">
+                            <p className="mb-5">
+                                Чоловічі кросівки Nike Air Max 270
+                            </p>
+                            <b>5000 грн</b>
+                        </div>
+                        <img src="/img/btn-remove.svg" alt="Remove" />
+                    </div>
+                </div>
+            </div>
+
             <header className="d-flex justify-between align-center p-40">
                 <div className="d-flex align-center	">
                     <img width={40} height={40} src="/img/logo.png" />
