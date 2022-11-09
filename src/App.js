@@ -6,7 +6,6 @@ function App() {
             <div className="overlay">
                 <div className="drawer">
                     <h2 className="mb-30">Корзина</h2>
-                    {/* Те що є в Корзині */}
                     <div className="items">
                         <div className="cartItem d-flex align-center mb-20">
                             <div
@@ -85,9 +84,9 @@ function App() {
                 </ul>
             </header>
             <div className="content p-40">
-                <div className="d-flex align-center justify-between mb-40">
+                <div className="d-flex align-center justify-between  mb-40">
                     <h1>Всі кросівки</h1>
-                    <div className="search-block d-flex">
+                    <div className="search-block ">
                         <img src="/img/search.svg" alt="Search" />
                         <input placeholder="Пошук..." />
                     </div>
