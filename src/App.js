@@ -5,7 +5,14 @@ function App() {
         <div className="wrapper clear">
             <div className="overlay">
                 <div className="drawer">
-                    <h2 className="mb-30">Корзина</h2>
+                    <h2 className="d-flex justify-between mb-30 ">
+                        Корзина{' '}
+                        <img
+                            className="removeBtn cu-p"
+                            src="/img/btn-remove.svg"
+                            alt="Remove"
+                        />
+                    </h2>
                     <div className="items">
                         <div className="cartItem d-flex align-center mb-20">
                             <div
@@ -45,7 +52,65 @@ function App() {
                                 alt="Remove"
                             />
                         </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
                     </div>
+
                     <div className="cartTotalBlock">
                         <ul>
                             <li>
@@ -59,7 +124,11 @@ function App() {
                                 <b>824,95 грн.</b>
                             </li>
                         </ul>
-                        <button>Оформити замовлення</button>
+
+                        <button className="greenButton">
+                            Оформити замовлення{' '}
+                            <img src="/img/arrow.svg" alt="Arrow" />
+                        </button>
                     </div>
                 </div>
             </div>
@@ -86,7 +155,7 @@ function App() {
             <div className="content p-40">
                 <div className="d-flex align-center justify-between  mb-40">
                     <h1>Всі кросівки</h1>
-                    <div className="search-block ">
+                    <div className="search-block d-flex">
                         <img src="/img/search.svg" alt="Search" />
                         <input placeholder="Пошук..." />
                     </div>
