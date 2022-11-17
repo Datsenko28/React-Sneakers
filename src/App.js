@@ -33,7 +33,83 @@ function App() {
                                 alt="Remove"
                             />
                         </div>
-                        <div className="cartItem d-flex align-center">
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
+                            <div
+                                style={{
+                                    backgroundImage: 'url(/img/sneakers/1.jpg)',
+                                }}
+                                className="cartItemImg"
+                            ></div>
+                            <div className="mr-20 flex">
+                                <p className="mb-5">
+                                    Чоловічі кросівки Nike Air Max 270
+                                </p>
+                                <b>5000 грн</b>
+                            </div>
+                            <img
+                                className="removeBtn"
+                                src="/img/btn-remove.svg"
+                                alt="Remove"
+                            />
+                        </div>
+                        <div className="cartItem d-flex align-center mb-20">
                             <div
                                 style={{
                                     backgroundImage: 'url(/img/sneakers/1.jpg)',
