@@ -109,17 +109,16 @@ header {
     padding: 30px;
 
     .items {
+        flex: 1;
         overflow: auto;
+        margin-bottom: 40px;
     }
 
     h2 {
         margin: 0;
-        margin-bottom: 40px;
     }
 }
-.items {
-    flex: 1;
-}
+
 .cartTotalBlock {
     ul {
         display: block;
