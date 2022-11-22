@@ -24,7 +24,7 @@ function App() {
 
                 <div className="d-flex">
                     {arr.map((obj) => (
-                        <b>{obj.name}</b>
+                        <Card />
                     ))}
                 </div>
             </div>
