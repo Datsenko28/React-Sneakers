@@ -2,6 +2,11 @@ import './index.scss'
 import Card from './components/Card'
 import Header from './components/Header'
 import Drawer from './components/Drawer'
+
+const arr = [
+    { name: 'Кросівки Чоловічі Nike Blazer Mid Suede', price: 5000 },
+    { name: 'Кросівки Чоловічі Nike Air Max 270', price: 6600 },
+]
 function App() {
     return (
         <div className="wrapper clear">
@@ -18,10 +23,9 @@ function App() {
                 </div>
 
                 <div className="d-flex">
-                    <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+                    {arr.map((obj) => (
+                        <b>{obj.name}</b>
+                    ))}
                 </div>
             </div>
         </div>
