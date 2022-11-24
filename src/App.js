@@ -4,8 +4,26 @@ import Header from './components/Header'
 import Drawer from './components/Drawer'
 
 const arr = [
-    { name: 'Кросівки Чоловічі Nike Blazer Mid Suede', price: 5000 },
-    { name: 'Кросівки Чоловічі Nike Air Max 270', price: 6600 },
+    {
+        title: 'Кросівки Чоловічі Nike Blazer Mid Suede',
+        price: 5000,
+        imageUrl: '/img/sneakers/1.jpg',
+    },
+    {
+        title: 'Кросівки Чоловічі Nike Air Max 270',
+        price: 6600,
+        imageUrl: '/img/sneakers/2.jpg',
+    },
+    {
+        title: 'Чоловічі кросівки Nike Blazer Mid Suede',
+        price: 7499,
+        imageUrl: '/img/sneakers/3.jpg',
+    },
+    {
+        title: 'Кросівки Puma X Aka Boku Future Rider',
+        price: 6700,
+        imageUrl: '/img/sneakers/4.jpg',
+    },
 ]
 function App() {
     return (
@@ -24,7 +42,11 @@ function App() {
 
                 <div className="d-flex">
                     {arr.map((obj) => (
-                        <Card />
+                        <Card
+                            title={obj.title}
+                            price={obj.price}
+                            imageUrl={obj.imageUrl}
+                        />
                     ))}
                 </div>
             </div>
