@@ -1,4 +1,8 @@
 function Card(props) {
+    const onClickButton = () => {
+        alert(props.title)
+    }
+
     return (
         <div className="card">
             <div className="favorite">
@@ -13,7 +17,7 @@ function Card(props) {
                     <b>{props.price} грн.</b>
                 </div>
 
-                <button className="button" onClick={() => alert(123)}>
+                <button className="button" onClick={onClickButton}>
                     <img
                         width={11}
                         height={11}
