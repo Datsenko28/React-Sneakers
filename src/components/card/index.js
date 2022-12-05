@@ -1,7 +1,5 @@
 function Card(props) {
-    const onClickButton = () => {
-        alert(props.title)
-    }
+    console.log(props)
 
     return (
         <div className="card">
@@ -17,7 +15,7 @@ function Card(props) {
                     <b>{props.price} грн.</b>
                 </div>
 
-                <button className="button" onClick={onClickButton}>
+                <button className="button" onClick={props.onClick}>
                     <img
                         width={11}
                         height={11}
