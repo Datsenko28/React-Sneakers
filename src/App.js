@@ -1,3 +1,4 @@
+import React from 'react'
 import './index.scss'
 import Card from './components/card'
 import Header from './components/Header'
