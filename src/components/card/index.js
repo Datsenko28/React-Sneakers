@@ -7,7 +7,7 @@ function Card(props) {
     const onClickPlus = () => {
         setIsAdded(!isAdded)
     }
- 
+
     return (
         <div className={styles.card}>
             <div className={styles.favorite} onClick={props.onFavorite}>
