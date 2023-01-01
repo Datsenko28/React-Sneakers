@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.scss'
 import Card from './components/card'
 import Header from './components/Header'
@@ -7,13 +7,16 @@ import Drawer from './components/Drawer'
 function App() {
     const [items, setItems] = useState([])
     const [cartOpened, setCartOpened] = useState(false)
-    fetch('https://63999aba29930e2bb3d8b29d.mockapi.io/items')
-        .then((res) => {
-            return res.json()
-        })
-        .then((json) => {
-            setItems(json)
-        })
+
+    useEffect(() => {
+        fetch('https://63999aba29930e2bb3d8b29d.mockapi.io/items')
+            .then((res) => {
+                return res.json()
+            })
+            .then((json) => {
+                setItems(json)
+            })
+    }, [])
     return (
         <div className="wrapper clear">
             {cartOpened ? (
