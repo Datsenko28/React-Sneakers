@@ -6,6 +6,7 @@ import Drawer from './components/Drawer'
 
 function App() {
     const [items, setItems] = useState([])
+    const [cartItems, setCartItems] = useState([])
     const [cartOpened, setCartOpened] = useState(false)
 
     useEffect(() => {
@@ -17,10 +18,19 @@ function App() {
                 setItems(json)
             })
     }, [])
+
+    const onAddToCart = (obj) => {
+        setCartItems((prev) => [...cartItems, obj])
+    }
+    console.log(cartItems)
+
     return (
         <div className="wrapper clear">
             {cartOpened ? (
-                <Drawer onClose={() => setCartOpened(false)} />
+                <Drawer
+                    items={cartItems}
+                    onClose={() => setCartOpened(false)}
+                />
             ) : null}
             <Header onClickCart={() => setCartOpened(true)} />
 
@@ -34,13 +44,13 @@ function App() {
                 </div>
 
                 <div className="d-flex flex-wrap">
-                    {items.map((obj) => (
+                    {items.map((item) => (
                         <Card
-                            title={obj.title}
-                            price={obj.price}
-                            imageUrl={obj.imageUrl}
+                            title={item.title}
+                            price={item.price}
+                            imageUrl={item.imageUrl}
                             onFavorite={() => console.log('Додали в закладки')}
-                            onPlus={() => console.log('Нажали плюс')}
+                            onPlus={(obj) => onAddToCart(item)}
                         />
                     ))}
                 </div>
