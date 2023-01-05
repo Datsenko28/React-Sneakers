@@ -7,6 +7,7 @@ import Drawer from './components/Drawer'
 function App() {
     const [items, setItems] = useState([])
     const [cartItems, setCartItems] = useState([])
+    const [searchValue, setSearchValue] = useState('')
     const [cartOpened, setCartOpened] = useState(false)
 
     useEffect(() => {
@@ -21,6 +22,10 @@ function App() {
 
     const onAddToCart = (obj) => {
         setCartItems((prev) => [...cartItems, obj])
+    }
+
+    const onChangeSearchInput = (event) => {
+        setSearchValue()
     }
 
     return (
@@ -38,7 +43,10 @@ function App() {
                     <h1>Всі кросівки</h1>
                     <div className="search-block d-flex">
                         <img src="/img/search.svg" alt="Search" />
-                        <input placeholder="Пошук..." />
+                        <input
+                            onChange={onChangeSearchInput}
+                            placeholder="Пошук..."
+                        />
                     </div>
                 </div>
 
