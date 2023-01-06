@@ -25,7 +25,7 @@ function App() {
     }
 
     const onChangeSearchInput = (event) => {
-        setSearchValue()
+        setSearchValue(event.target.value)
     }
 
     return (
@@ -40,7 +40,11 @@ function App() {
 
             <div className="content p-40">
                 <div className="d-flex align-center justify-between  mb-40">
-                    <h1>Всі кросівки</h1>
+                    <h1>
+                        {searchValue
+                            ? `Пошук по запросу: "${searchValue}"`
+                            : 'Всі кросівки'}
+                    </h1>
                     <div className="search-block d-flex">
                         <img src="/img/search.svg" alt="Search" />
                         <input
