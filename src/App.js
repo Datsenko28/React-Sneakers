@@ -49,29 +49,35 @@ function App() {
                         <img src="/img/search.svg" alt="Search" />
                         {searchValue && (
                             <img
+                                onClick={() => setSearchValue('')}
                                 className=" clear cu-p"
                                 src="/img/btn-remove.svg"
-                                alt="Close"
+                                alt="Clear"
                             />
                         )}
                         <input
                             onChange={onChangeSearchInput}
+                            value={searchValue}
                             placeholder="Пошук..."
                         />
                     </div>
                 </div>
 
                 <div className="d-flex flex-wrap">
-                    {items.map((item, index) => (
-                        <Card
-                            key={index}
-                            title={item.title}
-                            price={item.price}
-                            imageUrl={item.imageUrl}
-                            onFavorite={() => console.log('Додали в закладки')}
-                            onPlus={(obj) => onAddToCart(item)}
-                        />
-                    ))}
+                    {items
+                        .filter((item) => item.title.includes(searchValue))
+                        .map((item, index) => (
+                            <Card
+                                key={index}
+                                title={item.title}
+                                price={item.price}
+                                imageUrl={item.imageUrl}
+                                onFavorite={() =>
+                                    console.log('Додали в закладки')
+                                }
+                                onPlus={(obj) => onAddToCart(item)}
+                            />
+                        ))}
                 </div>
             </div>
         </div>
