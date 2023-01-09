@@ -77,7 +77,7 @@ function App() {
                                 price={item.price}
                                 imageUrl={item.imageUrl}
                                 onFavorite={() =>
-                                    console.log('Додали в закладки')
+                                    console.log('Додали v закладки')
                                 }
                                 onPlus={(obj) => onAddToCart(item)}
                             />
