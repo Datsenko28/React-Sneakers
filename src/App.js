@@ -17,10 +17,15 @@ function App() {
             .then((res) => {
                 setItems(res.data)
             })
+        axios
+            .get('https://63999aba29930e2bb3d8b29d.mockapi.io/cart')
+            .then((res) => {
+                setCartItems(res.data)
+            })
     }, [])
 
     const onAddToCart = (obj) => {
-        axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/cart', obj) 
+        axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/cart', obj)
 
         setCartItems((prev) => [...cartItems, obj])
     }
