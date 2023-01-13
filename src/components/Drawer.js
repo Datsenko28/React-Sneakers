@@ -1,6 +1,6 @@
 import React from 'react'
 //style={{ display: 'none' }}
-const Drawer = ({ onClose, items = [] }) => {
+const Drawer = ({ onClose, onRemove, items = [] }) => {
     return (
         <div className="overlay">
             <div className="drawer">
@@ -28,6 +28,7 @@ const Drawer = ({ onClose, items = [] }) => {
                                 <b>{obj.price}</b>
                             </div>
                             <img
+                                onClick={() => onRemove(obj.id)}
                                 className="removeBtn"
                                 src="/img/btn-remove.svg"
                                 alt="Remove"
