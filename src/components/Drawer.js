@@ -13,21 +13,23 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                         alt="Close"
                     />
                 </h2>
-                <div className="cartEmty d-flex align-center jastify-center flex-columnflex">
+
+                <div className="cartEmty d-flex align-center jastify-center flex-column flex">
                     <img
-                        src="mb-20"
+                        className="mb-20"
                         width="120px"
                         height="120px"
-                        src=""
+                        src="/img/empty-card.jpg"
                         alt=""
                     />
                     <h2>Корзина пуста</h2>
                     <p className="opacity-6">
-                        Добавте хоча б одину пару кросівок щоб зробити
+                        Добавте хоча б одну пару кросівок щоб зробити
                         замовлення
                     </p>
                     <button className="greenButton">
-                        <img src="" />
+                        <img src="/img/arrow.svg" alt="Arrow" />
+                        Повернутись назад
                     </button>
                 </div>
 
