@@ -14,47 +14,49 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                     />
                 </h2>
 
-                <div className="cartEmty d-flex align-center jastify-center flex-column flex">
-                    <img
-                        className="mb-20"
-                        width="120px"
-                        height="120px"
-                        src="/img/empty-card.jpg"
-                        alt=""
-                    />
-                    <h2>Корзина пуста</h2>
-                    <p className="opacity-6">
-                        Добавте хоча б одну пару кросівок щоб зробити
-                        замовлення
-                    </p>
-                    <button className="greenButton">
-                        <img src="/img/arrow.svg" alt="Arrow" />
-                        Повернутись назад
-                    </button>
-                </div>
-
-                <div className="items">
-                    {items.map((obj) => (
-                        <div className="cartItem d-flex align-center mb-20">
-                            <div
-                                style={{
-                                    backgroundImage: `url(${obj.imageUrl})`,
-                                }}
-                                className="cartItemImg"
-                            ></div>
-                            <div className="mr-20 flex">
-                                <p className="mb-5">{obj.title}</p>
-                                <b>{obj.price}</b>
+                {items.length > 0 ? (
+                    <div className="items">
+                        {items.map((obj) => (
+                            <div className="cartItem d-flex align-center mb-20">
+                                <div
+                                    style={{
+                                        backgroundImage: `url(${obj.imageUrl})`,
+                                    }}
+                                    className="cartItemImg"
+                                ></div>
+                                <div className="mr-20 flex">
+                                    <p className="mb-5">{obj.title}</p>
+                                    <b>{obj.price}</b>
+                                </div>
+                                <img
+                                    onClick={() => onRemove(obj.id)}
+                                    className="removeBtn"
+                                    src="/img/btn-remove.svg"
+                                    alt="Remove"
+                                />
                             </div>
-                            <img
-                                onClick={() => onRemove(obj.id)}
-                                className="removeBtn"
-                                src="/img/btn-remove.svg"
-                                alt="Remove"
-                            />
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="cartEmty d-flex align-center jastify-center flex-column flex">
+                        <img
+                            className="mb-20"
+                            width="120px"
+                            height="120px"
+                            src="/img/empty-card.jpg"
+                            alt=""
+                        />
+                        <h2>Корзина пуста</h2>
+                        <p className="opacity-6">
+                            Добавте хоча б одну пару кросівок щоб зробити
+                            замовлення
+                        </p>
+                        <button className="greenButton">
+                            <img src="/img/arrow.svg" alt="Arrow" />
+                            Повернутись назад
+                        </button>
+                    </div>
+                )}
 
                 <div className="cartTotalBlock">
                     <ul>
