@@ -48,7 +48,7 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                         />
                         <h2>Корзина пуста</h2>
                         <p className="opacity-6">
-                            Добавте хоча б одну пару кросівок щоб зробити
+                            Добавте хоча б одну пару кросiвок щоб зробити
                             замовлення
                         </p>
                         <button className="greenButton">
