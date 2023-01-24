@@ -71,7 +71,7 @@ const Drawer = ({ onClose, onRemove, items = [] }) => {
                             Добавте хоча б одну пару кросiвок щоб зробити
                             замовлення
                         </p>
-                        <button className="greenButton">
+                        <button onClick={onClose} className="greenButton">
                             <img src="/img/arrow.svg" alt="Arrow" />
                             Повернутись назад
                         </button>
