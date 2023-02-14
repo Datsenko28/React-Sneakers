@@ -23,24 +23,24 @@ const Header = (props) => {
                         width={18}
                         height={18}
                         src="/img/basket.svg"
-                        alt="Cart"
+                        alt="Корзина "
                     />
                     <span>1300 грн.</span>
                 </li>
-                {/* <li>
+                <li className="mr-2 0 cu-p">
                     <img
                         width={18}
                         height={18}
                         src="/img/heart.svg"
-                        alt="Cart"
+                        alt="Закладки"
                     />
-                </li> */}
+                </li>
                 <li>
                     <img
                         width={18}
                         height={18}
                         src="/img/user.svg"
-                        alt="User"
+                        alt="Користувачі"
                     />
                 </li>
             </ul>
