@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Routes, Route, Link } from 'react-router-dom'
 import axios from 'axios'
 import './index.scss'
 import Card from './components/card'
@@ -57,7 +58,10 @@ function App() {
                 />
             ) : null}
             <Header onClickCart={() => setCartOpened(true)} />
-
+            <Routes>
+                <Route path="/test">Тестова сторінка</Route>
+            </Routes>
+            12345
             <div className="content p-40">
                 <div className="d-flex align-center justify-between  mb-40">
                     <h1>
