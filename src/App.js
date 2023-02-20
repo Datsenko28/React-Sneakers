@@ -9,7 +9,7 @@ import Drawer from './components/Drawer'
 function App() {
     const [items, setItems] = useState([])
     const [cartItems, setCartItems] = useState([])
-    // const [favorites, setFavorites] = useState([])
+    const [favorites, setFavorites] = useState([])
     const [searchValue, setSearchValue] = useState('')
     const [cartOpened, setCartOpened] = useState(false)
 
@@ -38,11 +38,11 @@ function App() {
 
         setCartItems((prev) => [...prev.filter((item) => item.id !== id)])
     }
-    // const onAddFavorite = (obj) => {
-    //     axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/cart', obj)
+    const onAddFavorite = (obj) => {
+        axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/cart', obj)
 
-    //     setCartItems((prev) => [...prev, obj])
-    // }
+        setCartItems((prev) => [...prev, obj])
+    }
 
     const onChangeSearchInput = (event) => {
         setSearchValue(event.target.value)
@@ -59,7 +59,7 @@ function App() {
             ) : null}
             <Header onClickCart={() => setCartOpened(true)} />
             <Routes>
-                <Route path="/test">Тестова сторінка</Route>
+                <Route path="/favorite"></Route>Тестова інфа
             </Routes>
             12345
             <div className="content p-40">
