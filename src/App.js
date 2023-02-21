@@ -5,6 +5,7 @@ import './index.scss'
 import Header from './components/Header'
 import Drawer from './components/Drawer'
 import Home from './pages/Home'
+import Favorites from './pages/Favorites'
 
 function App() {
     const [items, setItems] = useState([])
@@ -73,7 +74,10 @@ function App() {
                     }
                 ></Route>
             </Routes>
-            12345
+            <Routes>
+                <Route path="/favorites" element={<Favorites />}></Route>
+            </Routes>
+            
         </div>
     )
 }
