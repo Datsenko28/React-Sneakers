@@ -10,7 +10,7 @@ import Favorites from './pages/Favorites'
 function App() {
     const [items, setItems] = useState([])
     const [cartItems, setCartItems] = useState([])
-    const [favorites, setFavorites] = useState([])
+    // const [favorites, setFavorites] = useState([])
     const [searchValue, setSearchValue] = useState('')
     const [cartOpened, setCartOpened] = useState(false)
 
@@ -25,6 +25,12 @@ function App() {
             .then((res) => {
                 setCartItems(res.data)
             })
+
+        // axios
+        //     .get('https://63999aba29930e2bb3d8b29d.mockapi.io/favorite')
+        //     .then((res) => {
+        //         setCartItems(res.data)
+        //     })
     }, [])
 
     const onAddToCart = (obj) => {
@@ -77,7 +83,6 @@ function App() {
             <Routes>
                 <Route path="/favorites" element={<Favorites />}></Route>
             </Routes>
-            
         </div>
     )
 }
