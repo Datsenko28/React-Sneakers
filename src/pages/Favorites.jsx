@@ -1,7 +1,7 @@
 import React from 'react';
+import Card from '../components/card';
 
-
-const Favorites = ({}) => {
+const Favorites = ({items}) => {
     return (
         <>
             <div className="content p-40">
@@ -10,8 +10,17 @@ const Favorites = ({}) => {
                 </div>
 
                 <div className="d-flex flex-wrap">
-                    Тут будуть мої закладки
-                </div>
+                {/* {items
+                        .map((item, index) => (
+                            <Card
+                                key={index}
+                                title={item.title}
+                                price={item.price}
+                                imageUrl={item.imageUrl}
+                               
+                            />
+                        ))}                */}
+                 </div>
             </div>
         </>
     );

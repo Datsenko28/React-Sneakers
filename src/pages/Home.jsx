@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../components/card'
 
 
-const Home = ({items,searchValue,setSearchValue,onChangeSearchInput,onAddFavorite,onAddToCart}) => {
+const Home = ({items,searchValue,setSearchValue,onChangeSearchInput,onAddFavorite,onAddToCart,obj}) => {
     return (
         <>
             <div className="content p-40">
@@ -44,8 +44,7 @@ const Home = ({items,searchValue,setSearchValue,onChangeSearchInput,onAddFavorit
                                 price={item.price}
                                 imageUrl={item.imageUrl}
                                 onFavorite={() =>
-                                    console.log('Додали в закладки')
-                                }
+                                    onAddFavorite(obj)}
                                 onPlus={(obj) => onAddToCart(item)}
                             />
                         ))}
