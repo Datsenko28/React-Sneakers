@@ -26,11 +26,11 @@ function App() {
                 setCartItems(res.data)
             })
         // mockApi have a problem with adding new Resource
-        // axios
-        //     .get('https://63999aba29930e2bb3d8b29d.mockapi.io/favorite')
-        //     .then((res) => {
-        //         setCartItems(res.data)
-        //     })
+        axios
+            .get('https://63999aba29930e2bb3d8b29d.mockapi.io/cart')
+            .then((res) => {
+                setFavorites(res.data)
+            })
     }, [])
 
     const onAddToCart = (obj) => {
@@ -46,7 +46,7 @@ function App() {
         setCartItems((prev) => [...prev.filter((item) => item.id !== id)])
     }
     const onAddFavorite = (obj) => {
-        // axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/favorite', obj)
+        axios.post('https://63999aba29930e2bb3d8b29d.mockapi.io/cart', obj)
         console.log(favorites)
         setFavorites((prev) => [...prev, obj])
     }
@@ -81,7 +81,10 @@ function App() {
                 ></Route>
             </Routes>
             <Routes>
-                <Route path="/favorites" element={<Favorites />}></Route>
+                <Route
+                    path="/favorites"
+                    element={<Favorites items={favorites} />}
+                ></Route>
             </Routes>
         </div>
     )

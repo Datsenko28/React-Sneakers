@@ -10,16 +10,15 @@ const Favorites = ({items}) => {
                 </div>
 
                 <div className="d-flex flex-wrap">
-                {/* {items
+                {items
                         .map((item, index) => (
-                            <Card
-                                key={index}
-                                title={item.title}
-                                price={item.price}
-                                imageUrl={item.imageUrl}
-                               
-                            />
-                        ))}                */}
+                          <Card
+                          key={index}
+                          title={item.title}
+                          price={item.price}
+                          imageUrl={item.imageUrl}
+                          />
+                        ))}               
                  </div>
             </div>
         </>
